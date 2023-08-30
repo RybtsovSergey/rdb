@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  rdb:
+    container_name: rdb
+    image: postgres:15
+    ports:
+      - 6000:5432
+    volumes:
+      - /srv/rdb:/var/lib/postgresql/data
+    logging:
+      options:
+        max-size: 100m
+    environment:
+      - POSTGRES_PASSWORD=mrhszNYNh5jG6b
+      - POSTGRES_USER=rdb
+      - POSTGRES_DB=rdb
+    restart: unless-stopped
+
+
+
