@@ -3,7 +3,7 @@ version: '3'
 services:
   rdb:
     container_name: rdb
-    image: postgres:15
+    image: postgres:17
     ports:
       - 6000:5432
     volumes:
